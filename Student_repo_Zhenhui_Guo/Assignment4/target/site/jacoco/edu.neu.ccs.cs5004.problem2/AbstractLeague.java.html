@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AbstractLeague.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.problem2</a> &gt; <span class="el_source">AbstractLeague.java</span></div><h1>AbstractLeague.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.problem2;
+
+import java.time.LocalDateTime;
+import java.util.Calendar;
+
+/**
+ * Represents details of a league, including league name, season start month and end month, number
+ * of games in the league and next game to be played.
+ */
+public abstract class AbstractLeague implements ILeague {
+  private static final int INITIAL_SCORE = 0;
+  private static final int MIN_VALUE = 1;
+  private static final int MIN_MONTHS = 0;
+  private static final int MAX_MONTHS = 11;
+  private String leagueName;
+  private int startMonths;
+  private int endMonths;
+  private int numberOfGames;
+  private Game nextGame;
+  private boolean onSeason;
+
+  /**
+   * Instantiates a new League.
+   *
+   * @param leagueName the league name
+   * @param startMonths the start months
+   * @param endMonths the end months
+   * @param numberOfGames the number of games
+   * @param nextGame the next game
+   * @throws IllegalArgumentException the illegal argument exception
+   */
+  public AbstractLeague(String leagueName, int startMonths, int endMonths, int numberOfGames,
+<span class="fc" id="L33">      Game nextGame) throws IllegalArgumentException {</span>
+<span class="fc bfc" id="L34" title="All 8 branches covered.">    if (startMonths &lt; MIN_MONTHS || startMonths &gt; MAX_MONTHS</span>
+        || endMonths &lt; MIN_MONTHS || endMonths &gt; MAX_MONTHS) {
+<span class="fc" id="L36">      throw new IllegalArgumentException();</span>
+    } else {
+<span class="fc" id="L38">      this.leagueName = leagueName;</span>
+<span class="fc" id="L39">      this.startMonths = startMonths;</span>
+<span class="fc" id="L40">      this.endMonths = endMonths;</span>
+<span class="fc" id="L41">      this.numberOfGames = numberOfGames;</span>
+<span class="fc" id="L42">      this.nextGame = nextGame;</span>
+<span class="fc" id="L43">      this.onSeason = this.isOnSeason();</span>
+    }
+<span class="fc" id="L45">  }</span>
+
+  @Override
+  public AbstractTeam compareTeam(AbstractTeam firstTeam, AbstractTeam secondTeam)
+      throws TiedTeamException, IllegalArgumentException {
+<span class="fc" id="L50">    if (!firstTeam.getAbstractLeague().getLeagueName()</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        .equals(secondTeam.getAbstractLeague().getLeagueName())) {</span>
+<span class="fc" id="L52">      throw new IllegalArgumentException(&quot;Two teams must be in the same league&quot;);</span>
+    } else {
+<span class="fc bfc" id="L54" title="All 2 branches covered.">      if (firstTeam.getPoints() &gt; secondTeam.getPoints()) {</span>
+<span class="fc" id="L55">        return firstTeam;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">      } else if (firstTeam.getPoints() &lt; secondTeam.getPoints()) {</span>
+<span class="fc" id="L57">        return secondTeam;</span>
+      } else {
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        if (firstTeam.getRecord().getWins() &gt; secondTeam.getRecord().getWins()) {</span>
+<span class="fc" id="L60">          return firstTeam;</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        } else if (firstTeam.getRecord().getWins() &lt; secondTeam.getRecord().getWins()) {</span>
+<span class="fc" id="L62">          return secondTeam;</span>
+        } else {
+<span class="fc" id="L64">          throw new TiedTeamException();</span>
+        }
+      }
+    }
+  }
+
+  @Override
+  public AbstractLeague scheduleGame(AbstractTeam homeTeam, AbstractTeam awayTeam, Calendar date)
+      throws IllegalArgumentException {
+<span class="fc bfc" id="L73" title="All 4 branches covered.">    if (homeTeam.getGameRemaining() &lt; MIN_VALUE || awayTeam.getGameRemaining() &lt; MIN_VALUE) {</span>
+<span class="fc" id="L74">      throw new IllegalArgumentException();</span>
+    }
+<span class="fc" id="L76">    Game game = new Game(homeTeam, awayTeam, date, INITIAL_SCORE, INITIAL_SCORE);</span>
+<span class="fc" id="L77">    return createGameForLeague(this.getLeagueName(), this.getStartMonths(), this.getEndMonths(),</span>
+<span class="fc" id="L78">        this.getNumberOfGames(), game);</span>
+  }
+
+  /**
+   * Schedule game for league abstract league.
+   *
+   * @param leagueName the league name
+   * @param startMonths the start months
+   * @param endMonths the end months
+   * @param numberOfGames the number of games
+   * @param game the game
+   * @return the abstract league
+   */
+  public abstract AbstractLeague createGameForLeague(String leagueName, int startMonths,
+      int endMonths, int numberOfGames, Game game);
+
+
+  /**
+   * Gets league name.
+   *
+   * @return the league name
+   */
+  public String getLeagueName() {
+<span class="fc" id="L101">    return leagueName;</span>
+  }
+
+  /**
+   * Gets start months.
+   *
+   * @return the start months
+   */
+  public int getStartMonths() {
+<span class="fc" id="L110">    return startMonths;</span>
+  }
+
+  /**
+   * Gets end months.
+   *
+   * @return the end months
+   */
+  public int getEndMonths() {
+<span class="fc" id="L119">    return endMonths;</span>
+  }
+
+  /**
+   * Gets number of games.
+   *
+   * @return the number of games
+   */
+  public int getNumberOfGames() {
+<span class="fc" id="L128">    return numberOfGames;</span>
+  }
+
+  /**
+   * Gets next game.
+   *
+   * @return the next game
+   */
+  public Game getNextGame() {
+<span class="fc" id="L137">    return nextGame;</span>
+  }
+
+
+  /**
+   * Is on season boolean.
+   *
+   * @return the boolean
+   */
+  public boolean isOnSeason() {
+<span class="fc bfc" id="L147" title="All 2 branches covered.">    if (this.getStartMonths() &lt;= LocalDateTime.now().getMonthValue()</span>
+<span class="fc bfc" id="L148" title="All 2 branches covered.">        &amp;&amp; LocalDateTime.now().getMonthValue() &lt;= this.getEndMonths()) {</span>
+<span class="fc" id="L149">      return true;</span>
+    } else {
+<span class="fc" id="L151">      return false;</span>
+    }
+  }
+
+  /**
+   * Gets on season.
+   *
+   * @return the on season
+   */
+  public boolean getOnSeason() {
+<span class="fc" id="L161">    return this.onSeason;</span>
+  }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Inventory.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">Inventory.java</span></div><h1>Inventory.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Represents details of a inventory.
+ */
+public class Inventory {
+
+  private Map&lt;String, List&lt;Item&gt;&gt; groceryStock;
+  private Map&lt;String, List&lt;Item&gt;&gt; householdStock;
+  private static final String BEER = &quot;Beer&quot;;
+  private static final String CHEESE = &quot;Cheese&quot;;
+  private static final String SALMON = &quot;Salmon&quot;;
+  private static final String SHAMPOO = &quot;Shampoo&quot;;
+  private static final String PAPER_TOWELS = &quot;PaperTowels&quot;;
+
+  /**
+   * Instantiates a new Inventory.
+   *
+   * @param groceryStock the grocery stock
+   * @param householdStock the household stock
+   */
+  public Inventory(
+      Map&lt;String, List&lt;Item&gt;&gt; groceryStock,
+<span class="fc" id="L27">      Map&lt;String, List&lt;Item&gt;&gt; householdStock) {</span>
+<span class="fc" id="L28">    this.groceryStock = groceryStock;</span>
+<span class="fc" id="L29">    this.householdStock = householdStock;</span>
+<span class="fc" id="L30">  }</span>
+
+  /**
+   * Add new stock item boolean.
+   *
+   * @param stockItem the stock item
+   * @return the boolean
+   */
+  public boolean addNewStockItem(StockItem stockItem) {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">    if (stockItem.getProduct() instanceof AbstractGrocery) {</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">      if (stockItem.getProduct() instanceof Beer) {</span>
+<span class="fc" id="L41">        groceryStock.get(BEER).add(stockItem);</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">      } else if (stockItem.getProduct() instanceof Salmon) {</span>
+<span class="fc" id="L43">        groceryStock.get(SALMON).add(stockItem);</span>
+      } else {
+<span class="fc" id="L45">        groceryStock.get(CHEESE).add(stockItem);</span>
+      }
+<span class="fc" id="L47">      return true;</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">    } else if (stockItem.getProduct() instanceof AbstractHousehold) {</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">      if (stockItem.getProduct() instanceof Shampoo) {</span>
+<span class="fc" id="L50">        householdStock.get(SHAMPOO).add(stockItem);</span>
+      } else {
+<span class="fc" id="L52">        householdStock.get(PAPER_TOWELS).add(stockItem);</span>
+      }
+<span class="fc" id="L54">      return true;</span>
+    } else {
+<span class="nc" id="L56">      return false;</span>
+    }
+    // for now we don't need to consider this situation
+  }
+
+  /**
+   * Gets retail value.
+   *
+   * @return the retail value
+   */
+  public double getRetailValue() {
+<span class="fc" id="L67">    double total = 0;</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">    for (Map.Entry&lt;String, List&lt;Item&gt;&gt; entry : groceryStock.entrySet()) {</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">      for (Item stockItem : entry.getValue()) {</span>
+<span class="fc" id="L70">        total += stockItem.getItemPrice();</span>
+<span class="fc" id="L71">      }</span>
+<span class="fc" id="L72">    }</span>
+
+<span class="fc bfc" id="L74" title="All 2 branches covered.">    for (Map.Entry&lt;String, List&lt;Item&gt;&gt; entry : householdStock.entrySet()) {</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">      for (Item stockItem : entry.getValue()) {</span>
+<span class="fc" id="L76">        total += stockItem.getItemPrice();</span>
+<span class="fc" id="L77">      }</span>
+<span class="fc" id="L78">    }</span>
+
+<span class="fc" id="L80">    return total;</span>
+  }
+
+  /**
+   * Check if the product is in stock.
+   *
+   * @param item the product in the shopping cart
+   * @return true if in stock, false if not
+   */
+  public boolean isInStock(Item item) {
+<span class="fc" id="L90">    List&lt;Item&gt; sameTypeOfProducts = getSameTypeOfProduct(item);</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">    for (Item stockItem : sameTypeOfProducts) {</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">      if (item.getProduct().equals(stockItem.getProduct())) {</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">        return stockItem.getQuantity() &gt;= item.getQuantity();</span>
+      }
+<span class="fc" id="L95">    }</span>
+<span class="fc" id="L96">    return false;</span>
+  }
+
+  /**
+   * Helper method to get the list of products that are the same type with the products in the
+   * shopping cart.
+   *
+   * @param item the item in the shopping cart
+   * @return the list of products in the same type
+   */
+  public List&lt;Item&gt; getSameTypeOfProduct(Item item) {
+    List&lt;Item&gt; sameTypeOfProducts;
+<span class="fc bfc" id="L108" title="All 2 branches covered.">    if (item.getProduct() instanceof AbstractGrocery) {</span>
+<span class="fc" id="L109">      sameTypeOfProducts = getGroceryStock()</span>
+<span class="fc" id="L110">          .get(item.getProduct().getProductType());//to discuss!!</span>
+
+    } else {
+<span class="fc" id="L113">      sameTypeOfProducts = getHouseholdStock()</span>
+<span class="fc" id="L114">          .get(item.getProduct().getProductType());</span>
+    }
+<span class="fc" id="L116">    return sameTypeOfProducts;</span>
+  }
+
+  /**
+   * Update the stock for each product customer buy.
+   *
+   * @param shoppingItem the item in the shopping cart
+   */
+  public void updateStock(Item shoppingItem) {
+<span class="fc" id="L125">    List&lt;Item&gt; sameTypeOfProducts = getSameTypeOfProduct(shoppingItem);</span>
+<span class="fc bfc" id="L126" title="All 2 branches covered.">    for (int i = 0; i &lt; sameTypeOfProducts.size(); i++) {</span>
+<span class="fc bfc" id="L127" title="All 2 branches covered.">      if (shoppingItem.getProduct().equals(sameTypeOfProducts.get(i).getProduct())) {</span>
+<span class="fc" id="L128">        sameTypeOfProducts.get(i).setQuantity(</span>
+<span class="fc" id="L129">            sameTypeOfProducts.get(i).getQuantity() - shoppingItem.getQuantity());</span>
+      }
+    }
+<span class="fc" id="L132">  }</span>
+
+  /**
+   * Gets grocery stock.
+   *
+   * @return the grocery stock
+   */
+  public Map&lt;String, List&lt;Item&gt;&gt; getGroceryStock() {
+<span class="fc" id="L140">    return groceryStock;</span>
+  }
+
+  /**
+   * Gets household stock.
+   *
+   * @return the household stock
+   */
+  public Map&lt;String, List&lt;Item&gt;&gt; getHouseholdStock() {
+<span class="fc" id="L149">    return householdStock;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AbstractShape.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment for class CS5010</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.lab03.shapes</a> &gt; <span class="el_source">AbstractShape.java</span></div><h1>AbstractShape.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.lab03.shapes;
+
+import edu.neu.ccs.cs5004.lab03.shapes.Point2D;
+
+public abstract class AbstractShape implements Shape {
+
+    protected Point2D reference;
+
+<span class="nc" id="L9">    public AbstractShape(Point2D reference) {</span>
+<span class="nc" id="L10">      this.reference = reference;</span>
+<span class="nc" id="L11">    }</span>
+
+    @Override
+    public double distanceFromOrigin() {
+<span class="nc" id="L15">      return reference.distToOrigin();</span>
+    }
+
+
+    @Override
+    public int compareTo(Shape s) {
+<span class="nc" id="L21">      double areaThis = this.area();</span>
+<span class="nc" id="L22">      double areaOther = s.area();</span>
+
+<span class="nc bnc" id="L24" title="All 2 branches missed.">      if (areaThis &lt; areaOther) {</span>
+<span class="nc" id="L25">        return -1;</span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">      } else if (areaOther &lt; areaThis) {</span>
+<span class="nc" id="L27">        return 1;</span>
+      } else {
+<span class="nc" id="L29">        return 0;</span>
+      }
+    }
+  }
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

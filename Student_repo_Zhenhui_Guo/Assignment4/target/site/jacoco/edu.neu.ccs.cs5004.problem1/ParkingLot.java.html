@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ParkingLot.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.problem1</a> &gt; <span class="el_source">ParkingLot.java</span></div><h1>ParkingLot.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.problem1;
+
+/**
+ * Represents details of a parking lot.
+ */
+<span class="fc" id="L6">public class ParkingLot {</span>
+
+  /**
+   * Park a vehicle given the vehicle and a parking spot.
+   *
+   * @param vehicle the vehicle
+   * @param parkingSpot the parking spot
+   * @return the boolean
+   * @throws UnavailableSpotException the unavailable spot exception
+   * @throws InvalidSpotTypeException the invalid spot type exception
+   * @throws InvalidSpotSizeException the invalid spot size exception
+   */
+  public boolean parkVehicle(Vehicle vehicle, ParkingSpot parkingSpot)
+      throws UnavailableSpotException, InvalidSpotTypeException, InvalidSpotSizeException {
+    try {
+<span class="fc" id="L21">      exceptionCheck(vehicle, parkingSpot);</span>
+<span class="fc" id="L22">      return true;</span>
+<span class="fc" id="L23">    } catch (Exception e) {</span>
+<span class="fc" id="L24">      return false;</span>
+    }
+  }
+
+  /**
+   * Check if an exception will be thrown.
+   *
+   * @param vehicle the vehicle
+   * @param parkingSpot the parking spot
+   * @throws UnavailableSpotException the unavailable spot exception
+   * @throws InvalidSpotTypeException the invalid spot type exception
+   * @throws InvalidSpotSizeException the invalid spot size exception
+   */
+  public void exceptionCheck(Vehicle vehicle, ParkingSpot parkingSpot)
+      throws UnavailableSpotException, InvalidSpotTypeException, InvalidSpotSizeException {
+<span class="fc" id="L39">    unavailableSpotExceptionCheck(vehicle, parkingSpot);</span>
+<span class="fc" id="L40">    invalidSpotTypeExceptionCheck(vehicle, parkingSpot);</span>
+<span class="fc" id="L41">    invalidSpotSizeExceptionCheck(vehicle, parkingSpot);</span>
+<span class="fc" id="L42">  }</span>
+
+  /**
+   * Check if an UnavailableSpotException will be thrown.
+   *
+   * @param vehicle the vehicle
+   * @param parkingSpot the parking spot
+   * @throws UnavailableSpotException the unavailable spot exception
+   */
+  public void unavailableSpotExceptionCheck(Vehicle vehicle, ParkingSpot parkingSpot)
+      throws UnavailableSpotException {
+<span class="fc bfc" id="L53" title="All 2 branches covered.">    if (parkingSpot.getParkingSpotStatus() == ParkingSpotStatus.TAKEN) {</span>
+<span class="fc" id="L54">      throw new UnavailableSpotException();</span>
+    }
+<span class="fc" id="L56">  }</span>
+
+  /**
+   * Check if an InvalidSpotTypeException will be thrown.
+   *
+   * @param vehicle the vehicle
+   * @param parkingSpot the parking spot
+   * @throws InvalidSpotTypeException the invalid spot type exception
+   */
+  public void invalidSpotTypeExceptionCheck(Vehicle vehicle, ParkingSpot parkingSpot)
+      throws InvalidSpotTypeException {
+<span class="fc bfc" id="L67" title="All 4 branches covered.">    if (parkingSpot.getType() == Type.DISABLE &amp;&amp; vehicle.getType() == Type.REGULAR) {</span>
+<span class="fc" id="L68">      throw new InvalidSpotTypeException();</span>
+    }
+<span class="fc" id="L70">  }</span>
+
+  /**
+   * Check if an InvalidSpotSizeException will be thrown.
+   *
+   * @param vehicle the vehicle
+   * @param parkingSpot the parking spot
+   * @throws InvalidSpotSizeException the invalid spot size exception
+   */
+  public void invalidSpotSizeExceptionCheck(Vehicle vehicle, ParkingSpot parkingSpot)
+      throws InvalidSpotSizeException {
+<span class="fc bfc" id="L81" title="All 4 branches covered.">    if ((vehicle.getSize() == Size.LARGE &amp;&amp; parkingSpot.getSize() != Size.LARGE)</span>
+<span class="fc bfc" id="L82" title="All 4 branches covered.">        || (vehicle.getSize() == Size.MEDIUM &amp;&amp; parkingSpot.getSize() == Size.SMALL)) {</span>
+<span class="fc" id="L83">      throw new InvalidSpotSizeException();</span>
+    }
+<span class="fc" id="L85">  }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

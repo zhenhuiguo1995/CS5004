@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem2/BagOfWords.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem2/ListNode.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem2/EmptyBag.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem2/IBagOfWords.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/IndexOutOfRangeException.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/ListNode.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/IPriorityQueue.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/Element.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/PriorityQueue.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment5/src/main/java/edu/neu/ccs/cs5004/assignment5/problem1/EmptyPriorityQueue.java">
+</file>
+</checkstyle>

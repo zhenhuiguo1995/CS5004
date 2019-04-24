@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Element.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.assignment5.problem1</a> &gt; <span class="el_source">Element.java</span></div><h1>Element.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.assignment5.problem1;
+
+/**
+ * Represents details of an element in a priority queue, including string and priority.
+ */
+public class Element {
+  private String string;
+  private Integer priority;
+
+  /**
+   * Instantiates a new Element.
+   *
+   * @param string the string
+   * @param priority the priority
+   */
+<span class="fc" id="L16">  public Element(String string, Integer priority) {</span>
+<span class="fc" id="L17">    this.string = string;</span>
+<span class="fc" id="L18">    this.priority = priority;</span>
+<span class="fc" id="L19">  }</span>
+
+  /**
+   * Gets string.
+   *
+   * @return the string
+   */
+  public String getString() {
+<span class="fc" id="L27">    return string;</span>
+  }
+
+  /**
+   * Gets priority.
+   *
+   * @return the priority
+   */
+  public Integer getPriority() {
+<span class="fc" id="L36">    return priority;</span>
+  }
+
+  @Override
+  public boolean equals(Object object) {
+<span class="fc bfc" id="L41" title="All 2 branches covered.">    if (this == object) {</span>
+<span class="fc" id="L42">      return true;</span>
+    }
+<span class="fc bfc" id="L44" title="All 4 branches covered.">    if (object == null || getClass() != object.getClass()) {</span>
+<span class="fc" id="L45">      return false;</span>
+    }
+
+<span class="fc" id="L48">    Element element = (Element) object;</span>
+
+<span class="fc bfc" id="L50" title="All 4 branches covered.">    if (getString() != null ? !getString().equals(element.getString())</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">        : element.getString() != null) {</span>
+<span class="fc" id="L52">      return false;</span>
+    }
+<span class="fc bfc" id="L54" title="All 2 branches covered.">    return getPriority() != null ? getPriority().equals(element.getPriority())</span>
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">        : element.getPriority() == null;</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="nc bnc" id="L60" title="All 2 branches missed.">    int result = getString() != null ? getString().hashCode() : 0;</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">    result = 31 * result + (getPriority() != null ? getPriority().hashCode() : 0);</span>
+<span class="nc" id="L62">    return result;</span>
+  }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

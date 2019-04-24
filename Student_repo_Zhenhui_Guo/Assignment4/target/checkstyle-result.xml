@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/Record.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/AbstractLeague.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/SoccerTeam.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/FutureGameException.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/ILeague.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/AmericanFootballTeam.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/BaseballTeam.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/Result.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/BaseballLeague.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/SoccerLeague.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/Game.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/TiedGameException.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/IGame.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/AbstractTeam.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/InvalidGameException.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/TiedTeamException.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/AmericanFootballLeague.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem1/ParkingSpotStatus.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem1/Size.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem1/ParkingLot.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem1/InvalidSpotTypeException.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem1/Type.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem1/ParkingSpot.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem1/Vehicle.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem1/UnavailableSpotException.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem1/InvalidSpotSizeException.java">
+</file>
+</checkstyle>

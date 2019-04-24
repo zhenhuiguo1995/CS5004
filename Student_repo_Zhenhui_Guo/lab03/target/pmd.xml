@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2019-01-30T13:01:02.858">
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/lab03/src/main/java/edu/neu/ccs/cs5004/lab03/shapes/AbstractShape.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="47" rule="ImportFromSamePackage" ruleset="Import Statements" package="edu.neu.ccs.cs5004.lab03.shapes" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#ImportFromSamePackage" priority="3">
+No need to import a type that lives in the same package
+</violation>
+<violation beginline="20" endline="20" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="AbstractShape" method="compareTo" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/lab03/src/main/java/edu/neu/ccs/cs5004/lab03/shapes/Circle.java">
+<violation beginline="18" endline="18" begincolumn="24" endcolumn="24" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="Circle" variable="x" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="18" endline="18" begincolumn="34" endcolumn="34" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="Circle" variable="y" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like y
+</violation>
+<violation beginline="38" endline="38" begincolumn="25" endcolumn="31" rule="UnusedFormalParameter" ruleset="Unused Code" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="Circle" variable="point2D" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'point2D'.
+</violation>
+<violation beginline="50" endline="50" begincolumn="13" endcolumn="21" rule="UnusedLocalVariable" ruleset="Unused Code" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="area" variable="copyPoint" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'copyPoint'.
+</violation>
+<violation beginline="51" endline="51" begincolumn="13" endcolumn="22" rule="UnusedLocalVariable" ruleset="Unused Code" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="area" variable="copyPoint2" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'copyPoint2'.
+</violation>
+<violation beginline="73" endline="73" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="moveX" variable="dx" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dx
+</violation>
+<violation beginline="74" endline="74" begincolumn="12" endcolumn="12" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="moveX" variable="x" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="75" endline="75" begincolumn="12" endcolumn="12" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="moveX" variable="y" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like y
+</violation>
+<violation beginline="80" endline="80" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="moveY" variable="dy" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dy
+</violation>
+<violation beginline="81" endline="81" begincolumn="14" endcolumn="14" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="moveY" variable="x" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="82" endline="82" begincolumn="14" endcolumn="14" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="moveY" variable="y" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like y
+</violation>
+<violation beginline="95" endline="95" begincolumn="5" endcolumn="18" rule="IfElseStmtsMustUseBraces" ruleset="Braces" package="edu.neu.ccs.cs5004.lab03.shapes" class="Circle" method="getRadius" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/lab03/src/main/java/edu/neu/ccs/cs5004/lab03/shapes/InvalidRadiusException.java">
+<violation beginline="5" endline="5" begincolumn="40" endcolumn="40" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="InvalidRadiusException" method="InvalidRadiusException" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like s
+</violation>
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/lab03/src/main/java/edu/neu/ccs/cs5004/lab03/shapes/Point2D.java">
+<violation beginline="8" endline="8" begincolumn="18" endcolumn="18" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Point2D" variable="x" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="9" endline="9" begincolumn="18" endcolumn="18" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Point2D" variable="y" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like y
+</violation>
+<violation beginline="17" endline="17" begincolumn="25" endcolumn="25" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Point2D" method="Point2D" variable="x" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="17" endline="17" begincolumn="35" endcolumn="35" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Point2D" method="Point2D" variable="y" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like y
+</violation>
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/lab03/src/main/java/edu/neu/ccs/cs5004/lab03/shapes/Rectangle.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="47" rule="ImportFromSamePackage" ruleset="Import Statements" package="edu.neu.ccs.cs5004.lab03.shapes" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#ImportFromSamePackage" priority="3">
+No need to import a type that lives in the same package
+</violation>
+<violation beginline="21" endline="21" begincolumn="27" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Rectangle" method="Rectangle" variable="x" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="21" endline="21" begincolumn="37" endcolumn="37" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Rectangle" method="Rectangle" variable="y" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like y
+</violation>
+<violation beginline="48" endline="48" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Rectangle" method="moveX" variable="dx" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dx
+</violation>
+<violation beginline="49" endline="49" begincolumn="12" endcolumn="12" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Rectangle" method="moveX" variable="x" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="50" endline="50" begincolumn="12" endcolumn="12" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Rectangle" method="moveX" variable="y" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like y
+</violation>
+<violation beginline="55" endline="55" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Rectangle" method="moveY" variable="dy" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dy
+</violation>
+<violation beginline="56" endline="56" begincolumn="12" endcolumn="12" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Rectangle" method="moveY" variable="x" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="57" endline="57" begincolumn="12" endcolumn="12" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Rectangle" method="moveY" variable="y" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like y
+</violation>
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/lab03/src/main/java/edu/neu/ccs/cs5004/lab03/shapes/Shape.java">
+<violation beginline="37" endline="37" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Shape" method="moveX" variable="dx" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dx
+</violation>
+<violation beginline="39" endline="39" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.lab03.shapes" class="Shape" method="moveY" variable="dy" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dy
+</violation>
+</file>
+</pmd>

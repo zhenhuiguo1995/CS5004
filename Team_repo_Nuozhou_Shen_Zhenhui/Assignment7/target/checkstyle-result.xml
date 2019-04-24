@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/Shampoo.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/ShoppingCartItem.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/Item.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/FulfillOrderResult.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/OrderSystem.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/ReceiptItem.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/AbstractProduct.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/Inventory.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/AbstractGrocery.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/Beer.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/OutOfStockException.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/StockItem.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/Name.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/Cheese.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/Customer.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/AbstractHousehold.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/Receipt.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/Salmon.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/ShoppingCart.java">
+</file>
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/PaperTowels.java">
+</file>
+</checkstyle>

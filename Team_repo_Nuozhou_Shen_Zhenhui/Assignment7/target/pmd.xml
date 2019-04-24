@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2019-03-27T16:57:45.640">
+<file name="/home/alfred/Desktop/cs5004/Team_repo_Nuozhou_Shen_Zhenhui/Assignment7/src/main/java/edu/neu/ccs/cs5004/StockItem.java">
+<violation beginline="41" endline="44" begincolumn="7" endcolumn="7" rule="CollapsibleIfStatements" ruleset="Basic" package="edu.neu.ccs.cs5004" class="StockItem" method="isQualifiedToSubstitute" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+</pmd>

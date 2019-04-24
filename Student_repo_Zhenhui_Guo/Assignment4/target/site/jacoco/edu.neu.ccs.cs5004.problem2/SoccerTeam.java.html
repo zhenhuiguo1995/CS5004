@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>SoccerTeam.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.problem2</a> &gt; <span class="el_source">SoccerTeam.java</span></div><h1>SoccerTeam.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.problem2;
+
+/**
+ * Represents details of a soccer team.
+ */
+public class SoccerTeam extends AbstractTeam{
+
+  /**
+   * Instantiates a new Abstract team.
+   *
+   * @param name the name
+   * @param abstractLeague the abstract league
+   * @param gamePlayed the game played
+   * @param gameRemaining the game remaining
+   * @param points the points
+   * @param lastGame the last game
+   * @param record the record
+   */
+  public SoccerTeam(String name, AbstractLeague abstractLeague, int gamePlayed, int gameRemaining,
+      int points, Game lastGame, Record record) {
+<span class="fc" id="L21">    super(name, abstractLeague, gamePlayed, gameRemaining, points, lastGame, record);</span>
+<span class="fc" id="L22">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

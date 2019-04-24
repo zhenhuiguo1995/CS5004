@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2019-02-16T10:24:48.279">
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Lab5/src/main/java/edu/neu/ccs/cs5004/listOfIntegers/Cons.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="41" rule="PackageCase" ruleset="Naming" package="edu.neu.ccs.cs5004.listOfIntegers" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#PackageCase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="68" endline="68" begincolumn="34" endcolumn="34" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.listOfIntegers" class="Cons" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="69" endline="69" begincolumn="9" endcolumn="35" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.neu.ccs.cs5004.listOfIntegers" class="Cons" method="equals" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="70" endline="70" begincolumn="9" endcolumn="66" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.neu.ccs.cs5004.listOfIntegers" class="Cons" method="equals" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="74" endline="75" begincolumn="9" endcolumn="25" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.neu.ccs.cs5004.listOfIntegers" class="Cons" method="equals" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Lab5/src/main/java/edu/neu/ccs/cs5004/listOfIntegers/Empty.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="41" rule="PackageCase" ruleset="Naming" package="edu.neu.ccs.cs5004.listOfIntegers" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#PackageCase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="15" endline="15" begincolumn="34" endcolumn="34" rule="ShortVariable" ruleset="Naming" package="edu.neu.ccs.cs5004.listOfIntegers" class="Empty" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="16" endline="16" begincolumn="9" endcolumn="35" rule="IfStmtsMustUseBraces" ruleset="Braces" package="edu.neu.ccs.cs5004.listOfIntegers" class="Empty" method="equals" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="17" endline="17" begincolumn="54" endcolumn="66" rule="IfElseStmtsMustUseBraces" ruleset="Braces" package="edu.neu.ccs.cs5004.listOfIntegers" class="Empty" method="equals" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+<violation beginline="18" endline="18" begincolumn="14" endcolumn="25" rule="IfElseStmtsMustUseBraces" ruleset="Braces" package="edu.neu.ccs.cs5004.listOfIntegers" class="Empty" method="equals" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/braces.html#IfElseStmtsMustUseBraces" priority="3">
+Avoid using if...else statements without curly braces
+</violation>
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Lab5/src/main/java/edu/neu/ccs/cs5004/listOfIntegers/InvalidCallException.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="41" rule="PackageCase" ruleset="Naming" package="edu.neu.ccs.cs5004.listOfIntegers" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#PackageCase" priority="3">
+Package name contains upper case characters
+</violation>
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Lab5/src/main/java/edu/neu/ccs/cs5004/listOfIntegers/List.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="41" rule="PackageCase" ruleset="Naming" package="edu.neu.ccs.cs5004.listOfIntegers" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#PackageCase" priority="3">
+Package name contains upper case characters
+</violation>
+</file>
+</pmd>

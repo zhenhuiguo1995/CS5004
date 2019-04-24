@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2019-02-14T01:01:28.751">
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/AbstractLeague.java">
+<violation beginline="160" endline="162" begincolumn="10" endcolumn="3" rule="BooleanGetMethodName" ruleset="Naming" package="edu.neu.ccs.cs5004.problem2" class="AbstractLeague" method="getOnSeason" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#BooleanGetMethodName" priority="4">
+A getX() method which returns a boolean should be named isX()
+</violation>
+</file>
+<file name="/home/alfred/Desktop/cs5004/Student_repo_Zhenhui_Guo/Assignment4/src/main/java/edu/neu/ccs/cs5004/problem2/Game.java">
+<violation beginline="32" endline="34" begincolumn="9" endcolumn="9" rule="CollapsibleIfStatements" ruleset="Basic" package="edu.neu.ccs.cs5004.problem2" class="Game" method="Game" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+</pmd>

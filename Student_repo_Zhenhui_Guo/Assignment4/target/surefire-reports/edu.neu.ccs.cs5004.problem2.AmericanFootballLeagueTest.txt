@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: edu.neu.ccs.cs5004.problem2.AmericanFootballLeagueTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec

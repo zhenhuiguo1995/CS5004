@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AmericanFootballLeague.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004.problem2</a> &gt; <span class="el_source">AmericanFootballLeague.java</span></div><h1>AmericanFootballLeague.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004.problem2;
+
+/**
+ * Represents detailed information about an American football league.
+ */
+public class AmericanFootballLeague extends AbstractLeague{
+  private static final int ONE = 1;
+  private static final int AMERICAN_FOOTBALL_WIN_SCORE = 1;
+  private static final int AMERICAN_FOOTBALL_LOSE_DRAW_SCORE = 0;
+
+
+  /**
+   * Instantiates a new American football league.
+   *
+   * @param leagueName the league name
+   * @param startMonths the start months
+   * @param endMonths the end months
+   * @param numberOfGames the number of games
+   * @param nextGame the next game
+   * @throws IllegalArgumentException the illegal argument exception
+   */
+  public AmericanFootballLeague(String leagueName, int startMonths, int endMonths,
+      int numberOfGames, Game nextGame) throws IllegalArgumentException {
+<span class="fc" id="L24">    super(leagueName, startMonths, endMonths, numberOfGames, nextGame);</span>
+<span class="fc" id="L25">  }</span>
+
+
+  @Override
+  public AbstractLeague createGameForLeague(String leagueName, int startMonths, int endMonths,
+      int numberOfGames, Game game) {
+<span class="fc" id="L31">    return new AmericanFootballLeague(leagueName, startMonths, endMonths, numberOfGames, game);</span>
+  }
+
+
+
+  @Override
+  public Game playGame(Game game, int homeTeamScore, int awayTeamScore)
+      throws IllegalArgumentException {
+    AmericanFootballTeam homeTeam;
+    AmericanFootballTeam awayTeam;
+<span class="fc bfc" id="L41" title="All 2 branches covered.">    if (homeTeamScore &gt; awayTeamScore) {</span>
+<span class="fc" id="L42">      homeTeam = updateTeam(game, (AmericanFootballTeam) game.getHomeTeam(), Result.WIN);</span>
+<span class="fc" id="L43">      awayTeam = updateTeam(game, (AmericanFootballTeam) game.getAwayTeam(), Result.LOSE);</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">    } else if (homeTeamScore &lt; awayTeamScore) {</span>
+<span class="fc" id="L45">      homeTeam = updateTeam(game, (AmericanFootballTeam) game.getHomeTeam(), Result.LOSE);</span>
+<span class="fc" id="L46">      awayTeam = updateTeam(game, (AmericanFootballTeam) game.getAwayTeam(), Result.WIN);</span>
+    } else {
+<span class="fc" id="L48">      homeTeam = updateTeam(game, (AmericanFootballTeam) game.getHomeTeam(), Result.TIE);</span>
+<span class="fc" id="L49">      awayTeam = updateTeam(game, (AmericanFootballTeam) game.getAwayTeam(), Result.TIE);</span>
+    }
+<span class="fc" id="L51">    return new Game(homeTeam, awayTeam, game.getDate(), homeTeamScore, awayTeamScore);</span>
+  }
+
+
+  /**
+   * Update an American football team based on the results of the game.
+   *
+   * @param game the game
+   * @param baseballTeam the baseball team
+   * @param result the result
+   * @return the american football team
+   */
+  public AmericanFootballTeam updateTeam(Game game, AmericanFootballTeam baseballTeam,
+      Result result) {
+<span class="fc" id="L65">    int gamePlayed = baseballTeam.getGamePlayed() + ONE;</span>
+<span class="fc" id="L66">    int gameRemaining = baseballTeam.getGameRemaining() - ONE;</span>
+    int points;
+<span class="fc" id="L68">    Record oldRecord = baseballTeam.getRecord();</span>
+    Record newRecord;
+<span class="fc bfc" id="L70" title="All 2 branches covered.">    if (result == Result.WIN) {</span>
+<span class="fc" id="L71">      points = baseballTeam.getPoints() + AMERICAN_FOOTBALL_WIN_SCORE;</span>
+<span class="fc" id="L72">      newRecord = new Record(oldRecord.getWins() + ONE, oldRecord.getLosses(),</span>
+<span class="fc" id="L73">          oldRecord.getDraws());</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">    } else if (result == Result.LOSE) {</span>
+<span class="fc" id="L75">      points = baseballTeam.getPoints() + AMERICAN_FOOTBALL_LOSE_DRAW_SCORE;</span>
+<span class="fc" id="L76">      newRecord = new Record(oldRecord.getWins(), oldRecord.getLosses() + ONE,</span>
+<span class="fc" id="L77">          oldRecord.getDraws());</span>
+    } else {
+<span class="fc" id="L79">      points = baseballTeam.getPoints() + AMERICAN_FOOTBALL_LOSE_DRAW_SCORE;</span>
+<span class="fc" id="L80">      newRecord = new Record(oldRecord.getWins(), oldRecord.getLosses(),</span>
+<span class="fc" id="L81">          oldRecord.getDraws() + ONE);</span>
+    }
+<span class="fc" id="L83">    return new AmericanFootballTeam(baseballTeam.getName(), baseballTeam.getAbstractLeague(),</span>
+        gamePlayed, gameRemaining, points, game, newRecord);
+  }
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AbstractHousehold.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">AbstractHousehold.java</span></div><h1>AbstractHousehold.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+/**
+ * Represent details of the Abstract household class.
+ */
+public class AbstractHousehold extends AbstractProduct {
+
+  private int units;
+
+  /**
+   * Instantiates a new Abstract product.
+   *
+   * @param productType the product type
+   * @param manufacturer the manufacturer
+   * @param productName the product name
+   * @param price the price
+   * @param minimumAge the minimum age
+   * @param units the units
+   */
+  public AbstractHousehold(String productType, String manufacturer, String productName,
+      double price,
+      int minimumAge, int units) {
+<span class="fc" id="L23">    super(productType, manufacturer, productName, price, minimumAge);</span>
+<span class="fc" id="L24">    this.units = units;</span>
+<span class="fc" id="L25">  }</span>
+
+  /**
+   * Gets units.
+   *
+   * @return the units
+   */
+  public int getUnits() {
+<span class="fc" id="L33">    return units;</span>
+  }
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

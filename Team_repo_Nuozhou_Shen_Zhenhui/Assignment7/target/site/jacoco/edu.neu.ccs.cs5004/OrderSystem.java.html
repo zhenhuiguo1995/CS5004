@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>OrderSystem.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">OrderSystem.java</span></div><h1>OrderSystem.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * This class represents an order system which can fulfill and process the order.
+ */
+public class OrderSystem {
+
+  private Inventory inventory;
+
+  /**
+   * Create the order system.
+   *
+   * @param inventory the inventory contains the stock of the items
+   */
+<span class="fc" id="L18">  public OrderSystem(Inventory inventory) {</span>
+<span class="fc" id="L19">    this.inventory = inventory;</span>
+<span class="fc" id="L20">  }</span>
+
+  /**
+   * Process the the order: remove the products that the customer is not old enough to buy, update
+   * the quantity of purchased product in inventory, empty the shopping cart and give the receipt.
+   * @param customer the customer
+   * @return the receipt for this order
+   */
+  public Receipt process(Customer customer) {
+<span class="fc" id="L29">    FulfillOrderResult fulFillResult = customer.getShoppingCart().fulfillOrder(inventory);</span>
+<span class="fc" id="L30">    List&lt;Item&gt; removedProducts = new LinkedList&lt;&gt;();</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">    for (Item shoppingItem : customer.getShoppingCart().getShoppingList()) {</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">      if (!customer.isOldEnoughToBuy(shoppingItem)) {</span>
+<span class="fc" id="L33">        customer.getShoppingCart().getShoppingList().remove(shoppingItem);</span>
+<span class="fc" id="L34">        removedProducts.add(new ReceiptItem(</span>
+<span class="fc" id="L35">            shoppingItem.getProduct(), shoppingItem.getQuantity()));</span>
+      }
+<span class="fc" id="L37">      inventory.updateStock(shoppingItem);</span>
+<span class="fc" id="L38">    }</span>
+<span class="fc" id="L39">    return buildReceipt(customer, fulFillResult, removedProducts);</span>
+  }
+
+  /**
+   * A helper method to build the receipt.
+   *
+   * @param customer the customer
+   * @param fulfillOrderResult the result of method fulfill order
+   * @param removedProducts the removed products from processing
+   * @return the receipt
+   */
+  private Receipt buildReceipt(Customer customer, FulfillOrderResult fulfillOrderResult,
+      List&lt;Item&gt; removedProducts) {
+<span class="fc" id="L52">    removedProducts.addAll(fulfillOrderResult.getRemovedProducts());</span>
+<span class="fc" id="L53">    List&lt;Item&gt; receivedItem = new LinkedList&lt;&gt;();</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">    for (Item item : customer.getShoppingCart().getShoppingList()) {</span>
+<span class="fc" id="L55">      receivedItem.add(new ReceiptItem(item.getProduct(), item.getQuantity()));</span>
+<span class="fc" id="L56">    }</span>
+<span class="fc" id="L57">    Receipt receipt = new Receipt(receivedItem, fulfillOrderResult.getOutOfStockProducts(),</span>
+        removedProducts);
+<span class="fc" id="L59">    return receipt;</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

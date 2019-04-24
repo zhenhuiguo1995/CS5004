@@ -1,0 +1,25 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,BaseballLeague,0,127,0,4,0,20,0,6,0,4
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,Record,0,33,0,0,0,13,0,5,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,TiedGameException,0,3,0,0,0,1,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,SoccerLeague,0,168,0,8,0,27,0,8,0,4
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,AbstractTeam,0,59,0,2,0,20,0,10,0,9
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,FutureGameException,0,3,0,0,0,1,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,SoccerTeam,0,10,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,TiedTeamException,0,3,0,0,0,1,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,AbstractLeague,0,150,0,26,0,37,0,23,0,10
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,AmericanFootballTeam,0,10,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,InvalidGameException,0,3,0,0,0,1,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,Game,0,101,0,20,0,25,0,18,0,8
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,Result,9,49,0,0,0,2,2,2,2,2
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,AmericanFootballLeague,0,168,0,8,0,27,0,8,0,4
+CS5004 Assignment,edu.neu.ccs.cs5004.problem2,BaseballTeam,0,10,0,0,0,2,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem1,UnavailableSpotException,0,3,0,0,0,1,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem1,Vehicle,0,15,0,0,0,6,0,3,0,3
+CS5004 Assignment,edu.neu.ccs.cs5004.problem1,Type,9,29,0,0,0,2,2,2,2,2
+CS5004 Assignment,edu.neu.ccs.cs5004.problem1,InvalidSpotTypeException,0,3,0,0,0,1,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem1,ParkingSpot,0,21,0,0,0,8,0,4,0,4
+CS5004 Assignment,edu.neu.ccs.cs5004.problem1,ParkingLot,0,68,0,14,0,19,0,13,0,6
+CS5004 Assignment,edu.neu.ccs.cs5004.problem1,InvalidSpotSizeException,0,3,0,0,0,1,0,1,0,1
+CS5004 Assignment,edu.neu.ccs.cs5004.problem1,ParkingSpotStatus,9,29,0,0,0,2,2,2,2,2
+CS5004 Assignment,edu.neu.ccs.cs5004.problem1,Size,9,39,0,0,0,2,2,2,2,2
